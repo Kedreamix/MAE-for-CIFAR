@@ -1,6 +1,29 @@
 # MAE实现及预训练可视化 （CIFAR-Pytorch）
+<!-- TOC -->
 
-@[toc]
+- [MAE实现及预训练可视化 （CIFAR-Pytorch）](#mae实现及预训练可视化-cifar-pytorch)
+    - [灵感来源](#灵感来源)
+    - [自监督学习](#自监督学习)
+    - [自监督的发展](#自监督的发展)
+    - [MAE (Masked Autoencoders)](#mae-masked-autoencoders)
+        - [方法介绍](#方法介绍)
+        - [MAE流程图](#mae流程图)
+    - [搭建 MAE 模型](#搭建-mae-模型)
+        - [MAE 组网](#mae-组网)
+        - [MAE 预训练（pretrain)](#mae-预训练pretrain)
+            - [Encoder](#encoder)
+            - [Decoder](#decoder)
+            - [总结](#总结)
+            - [测试MAE](#测试mae)
+        - [MAE 微调（finetune）](#mae-微调finetune)
+    - [MAE 预训练](#mae-预训练)
+    - [MAE 微调](#mae-微调)
+    - [Result 结果](#result-结果)
+    - [总结](#总结-1)
+    - [感谢和体会](#感谢和体会)
+
+<!-- /TOC -->
+
 ## 灵感来源
 
 监督学习是训练机器学习模型的传统方法，它在训练时每一个观察到的数据都需要有标注好的标签。如果我们有一种训练机器学习模型的方法不需要收集标签，会怎么样?如果我们从收集的相同数据中提取标签呢?这种类型的学习算法被称为自监督学习。这种方法在自然语言处理中工作得很好。一个例子是BERT，谷歌自2019年以来一直在其搜索引擎中使用BERT¹。不幸的是，对于计算机视觉来说，情况并非如此。
