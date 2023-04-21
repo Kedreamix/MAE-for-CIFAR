@@ -1,0 +1,5 @@
+存放logs的tensorboard日志文件
+
+已经上传到tensorboard上了，可以自己查看https://tensorboard.dev/experiment/GIv9UzukQ5yFalbykPVMFQ/
+
+也可以在release中查看
