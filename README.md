@@ -65,3 +65,16 @@ tensorboard --logdir logs
 
 
 其他的所有的训练权重和logs，最后都上传到release上了，可以自取
+
+
+
+### License
+
+This project is under the MIT license. See [LICENSE](https://github.com/Kedreamix/MAE-for-CIFAR/blob/main/LICENSE) for details.
+
+
+
+### Reference
+
+- https://github.com/IcarusWizard/MAE
+- https://github.com/facebookresearch/mae
