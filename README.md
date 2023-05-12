@@ -76,5 +76,7 @@ This project is under the MIT license. See [LICENSE](https://github.com/Kedreami
 
 ### Reference
 
+该项目主要基于 https://github.com/IcarusWizard/MAE 进行了一些翻译和注释，同时还加入了其他的一些功能。
+
 - https://github.com/IcarusWizard/MAE
 - https://github.com/facebookresearch/mae
